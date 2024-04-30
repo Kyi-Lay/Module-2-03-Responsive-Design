@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What happens when we set the display property to flex? 
+TODO: items will all line up in a row, using the size of the content as their size in the main axis. 
+*/
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 
+What is the flex-wrap property? 
+TODO: lex-wrap is set to wrap, the items wrap. Set it to nowrap, which is also the initial value, and they will instead shrink to fit the container because they are using initial flexbox values that allows items to shrink.
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do? 
+TODO: The justify-content property is used to align the items on the main axis, the direction in which has set the flow. The initial value is which will line the items up at the start edge of the container, but you could also set the value to line them up at the end, or to line them up in the center.
+*/
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+What is it doing here? 
+TODO: The shorthand property sets how a flex item will grow or shrink to fit the space available in its flex container.
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+What does the flex-direction property define?
+What is it doing here? 
+TODO: The flex-direction property sets how flex items are placed in the flex container defining the main axis and the direction.
+*/
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
